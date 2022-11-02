@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zelda Scroll</title>
+</head>
+
+<body>
+    <section>
+        <img src="assets/bg.png" id="bg">
+        <img src="assets/logo.png" id="logo">
+        <img src="assets/link.png" id="link">
+        <h2 id="text">Mundo Aberto</h2>
+    </section>
+    <div class="text-box">
+        <h1>Siga sempre em frente (seja lá o que pra frente signifique)</h1>
+        <p>O jogador pode se mover livremente num mundo aberto e lhe é dada liberdade 
+            considerável na escolha de como ou quando realizar os objetivos. O termo 
+            "mundo aberto" sugere a ausência de barreiras artificiais, em 
+            contraste com muros invisíveis e telas de carregamento, comuns em jogos lineares.
+        </p>
+        <a href="./pages/login.html"><button class="login">Login</button></a>
+    </div>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let link = document.getElementById("link");
+        let logo = document.getElementById("logo");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            logo.style.left = -value * 0.85 + 'px';
+            logo.style.top = value * 0.22 + 'px';
+            link.style.top = value * 0.3 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
+</body>
+
+</html>
